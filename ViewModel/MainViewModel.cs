@@ -5,12 +5,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.ComponentModel;
+using Model;
+using System.Collections.ObjectModel;
 
 namespace ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        Spiel spiel;
         ICommand bdt1;
+  
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -37,11 +41,18 @@ namespace ViewModel
 
         public MainViewModel()
         {
+            spiel = new Spiel();
+            spiel.LoadSpieler();
             bdt1 = new UserCommands(SetzeStein);
+        }
+        public ObservableCollection<Spieler>LSTSpieler
+        {
+            get { return spiel.LstSpieler; }
         }
 
         private void SetzeStein(object obj)
         {
+
             onPropertyChanged(new PropertyChangedEventArgs("Background"));
         }
     }
