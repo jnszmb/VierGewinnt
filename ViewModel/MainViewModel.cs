@@ -5,44 +5,55 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.ComponentModel;
+using System.Windows.Media;
 
 namespace ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        ICommand bdt1;
+        private System.Windows.Media.Brush _b;
+        private System.Windows.Media.Brush BackgroundColour;
 
-        public event PropertyChangedEventHandler PropertyChanged;
-
-        public void onPropertyChanged(PropertyChangedEventArgs e)
-        {
-            if(PropertyChanged != null)
-            {
-                PropertyChanged(this, e);
-            }
-        }
-
-        public ICommand Bdt1
+        public Brush B
         {
             get
             {
-                return bdt1;
+                return _b;
+            }
+            
+            set
+            {
+                _b = value; NotifyPropertyChanged("BackgroundColour");
+            }
+        }
+
+        private string _s;
+        public string SomeOtherProperty
+        {
+            get
+            {
+                return _s;
             }
 
             set
             {
-                bdt1 = value;
+                _s = value; NotifyPropertyChanged("SomeOtherProperty"); BackgroundColour = System.Windows.Media.Brushes.Green;
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+        private void NotifyPropertyChanged(string propertyName = "")
+        {
+            if(PropertyChanged != null)
+            {
+                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
             }
         }
 
         public MainViewModel()
         {
-            bdt1 = new UserCommands(SetzeStein);
+            
         }
 
-        private void SetzeStein(object obj)
-        {
-            onPropertyChanged(new PropertyChangedEventArgs("Background"));
-        }
     }
 }

@@ -34,7 +34,18 @@
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="2">
-                <Button x:Name="Peter" Background="White" Click="Button_Click"></Button>
+                <Button Height="82" VerticalAlignment="Top">
+                    <Button.Style>
+                        <Style TargetType="Button">
+                            <Setter Property="Background" Value="LightGreen"/>
+                            <Style.Triggers>
+                                <DataTrigger Binding="{Binding PropertyChanged}" Value="True">
+                                    <Setter Property="Background" Value="Pink"/>
+                                </DataTrigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Button.Style>
+                </Button>
             </Border>
             <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>

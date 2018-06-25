@@ -11,6 +11,7 @@ namespace ViewModel
     {
         public event EventHandler CanExecuteChanged;
         private Action<Object> action;
+
         public UserCommands(Action<object> action)
         {
             this.action = action;
