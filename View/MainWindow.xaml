@@ -4,8 +4,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:View"
+        xmlns:vm="clr-namespace:ViewModel;assembly=ViewModel"
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1000">
+    <Window.Background>
+        <ImageBrush ImageSource="H:\Eigene Dateien\C# 2017_2018\VierGewinntProjekt\Download.jpg"></ImageBrush>
+    </Window.Background>
+        <Window.DataContext>
+        <vm:MainViewModel></vm:MainViewModel>
+    </Window.DataContext>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition></RowDefinition>
@@ -32,20 +39,10 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
             <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="2">
-                <Button Height="82" VerticalAlignment="Top">
-                    <Button.Style>
-                        <Style TargetType="Button">
-                            <Setter Property="Background" Value="LightGreen"/>
-                            <Style.Triggers>
-                                <DataTrigger Binding="{Binding PropertyChanged}" Value="True">
-                                    <Setter Property="Background" Value="Pink"/>
-                                </DataTrigger>
-                            </Style.Triggers>
-                        </Style>
-                    </Button.Style>
-                </Button>
+           
             </Border>
             <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
@@ -88,6 +85,60 @@
             <Border Grid.Column="6" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="6" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="6" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+            <Button Grid.Column="0" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Bdt1}"></Button>
+            <Button Grid.Column="1" Grid.Row="6" Content="^" FontSize="30"></Button>
+            <Button Grid.Column="2" Grid.Row="6" Content="^" FontSize="30"></Button>
+            <Button Grid.Column="3" Grid.Row="6" Content="^" FontSize="30"></Button>
+            <Button Grid.Column="4" Grid.Row="6" Content="^" FontSize="30"></Button>
+            <Button Grid.Column="5" Grid.Row="6" Content="^" FontSize="30"></Button>
+            <Button Grid.Column="6" Grid.Row="6" Content="^" FontSize="30"></Button>
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="0">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="combobox_sp1" Margin="10" ItemsSource="{Binding Path=LSTSpieler}"></ComboBox>
+            <ComboBox x:Name="combobox_sp2" Grid.Row="1" Margin="10" ItemsSource="{Binding Path=LSTSpieler}"></ComboBox>
+            <TextBox x:Name="tb_name" Grid.Row="2" Margin="10"></TextBox>
+            <StackPanel Grid.Row="3" Grid.Column="0" Orientation="Horizontal">
+                <Button x:Name="button_aufnehmen" Content="Spieler aufnehmen" Margin="40,10,50,10" Command="{Binding BtdReg}" CommandParameter="{Binding ElementName=tb_name, Path=Text}"></Button>
+                <Button x:Name="button_speichern" Content="Spieler speichern" Margin="10" Command="{Binding BtdSave}" CommandParameter="{Binding ElementName=combobox_sp1, Path=Items}"></Button>
+            </StackPanel>
+           
+        </Grid>
+        <Grid Grid.Row="0" Grid.Column="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+                <RowDefinition></RowDefinition>
+           </Grid.RowDefinitions>
+            <Button x:Name="button_start" Content="Spiel starten" Grid.ColumnSpan="4" FontSize="60" Command="{Binding BtdStart}"></Button>
+            <Label Grid.Row="1" Content="Spieler 1:" FontSize="29" Margin="20"></Label>
+            <TextBox x:Name="tb_sp1" Grid.Row="1" Grid.Column="1" Margin="20" Text="{Binding ElementName=combobox_sp1, Path=SelectedItem.Name}" IsEnabled="False" Background="White"></TextBox>
+            <Label Grid.Row="1" Grid.Column="2" Content="Spieler 2:" FontSize="29" Margin="20"></Label>
+            <TextBox x:Name="tb_sp2" Grid.Row="1" Grid.Column="3" Margin="20" Text="{Binding ElementName=combobox_sp2, Path=SelectedItem.Name}" IsEnabled="False" Background="White"></TextBox>
+            <Label Grid.Row="2" Content="Punkte:" FontSize="29" Margin="20"></Label>
+            <TextBox x:Name="tb_punkteSp1" Grid.Row="2" Grid.Column="1" Margin="20" Text="{Binding ElementName=combobox_sp1, Path=SelectedItem.Punktzahl}" IsEnabled="False" Background="White"></TextBox>
+            <Label Grid.Row="2" Grid.Column="2" Content="Punkte:" Margin="20" FontSize="29"></Label>
+            <TextBox x:Name="tb_punkteSp2" Grid.Row="2" Grid.Column="3" Margin="20" Text="{Binding ElementName=combobox_sp2, Path=SelectedItem.Punktzahl}" IsEnabled="False" Background="White"/>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.RowDefinitions>
+                <RowDefinition></RowDefinition>
+                <RowDefinition Height="6*"></RowDefinition>
+            </Grid.RowDefinitions>
+            <Label Grid.Row="0" Content="Bestenliste"  FontSize="50" Margin="30,0,0,0"></Label>
+            <TextBlock x:Name="tblock_best" Grid.Row="1" Text="{Binding Path=Best}" FontSize="20"></TextBlock>
+            <Border Grid.Row="1" BorderBrush="Black" BorderThickness="2" Margin="0"></Border>
         </Grid>
     </Grid>
 </Window>

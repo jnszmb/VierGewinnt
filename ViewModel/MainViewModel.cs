@@ -5,16 +5,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using System.ComponentModel;
-using System.Windows.Media;
+using Model;
+using System.Collections.ObjectModel;
+using System.Windows;
 
 namespace ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
-        private System.Windows.Media.Brush _b;
-        private System.Windows.Media.Brush BackgroundColour;
+        ICommand bdt1;
 
-        public Brush B
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        public void onPropertyChanged(PropertyChangedEventArgs e)
         {
             get
             {
@@ -27,27 +30,22 @@ namespace ViewModel
             }
         }
 
-        private string _s;
-        public string SomeOtherProperty
+        public ICommand Bdt1
         {
             get
             {
-                return _s;
+                return bdt1;
             }
 
             set
             {
-                _s = value; NotifyPropertyChanged("SomeOtherProperty"); BackgroundColour = System.Windows.Media.Brushes.Green;
+                bdt1 = value;
             }
         }
 
-        public event PropertyChangedEventHandler PropertyChanged;
-        private void NotifyPropertyChanged(string propertyName = "")
+        public MainViewModel()
         {
-            if(PropertyChanged != null)
-            {
-                PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
-            }
+            bdt1 = new UserCommands(SetzeStein);
         }
 
         public MainViewModel()
