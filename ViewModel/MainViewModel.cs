@@ -19,15 +19,6 @@ namespace ViewModel
 
         public void onPropertyChanged(PropertyChangedEventArgs e)
         {
-            get
-            {
-                return _b;
-            }
-            
-            set
-            {
-                _b = value; NotifyPropertyChanged("BackgroundColour");
-            }
         }
 
         public ICommand Bdt1
@@ -47,11 +38,5 @@ namespace ViewModel
         {
             bdt1 = new UserCommands(SetzeStein);
         }
-
-        public MainViewModel()
-        {
-            
-        }
-
     }
 }

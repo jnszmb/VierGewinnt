@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1000">
     <Window.Background>
-        <ImageBrush ImageSource="H:\Eigene Dateien\C# 2017_2018\VierGewinntProjekt\Download.jpg"></ImageBrush>
+        <ImageBrush ImageSource="H:\Eigene Dateien\FI11\C#\ProjektVierGewinnt1\Download.jpg"></ImageBrush>
     </Window.Background>
         <Window.DataContext>
         <vm:MainViewModel></vm:MainViewModel>
@@ -48,7 +48,9 @@
             <Border Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-            <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
+            <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="2">
+                <Image Source="H:\Eigene Dateien\FI11\C#\ProjektVierGewinnt1\Download.jpg"></Image>
+            </Border>
             <Border Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="1" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
