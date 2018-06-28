@@ -9,9 +9,8 @@ using Model;
 using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Media.Imaging;
-using System.Drawing;
 using System.Windows.Media;
+using System.Drawing;
 
 namespace ViewModel
 {
@@ -20,12 +19,12 @@ namespace ViewModel
         Spiel spiel;
         int punkteSp1;
         int punkteSp2;
-        SolidColorBrush Background;
         
         ICommand btdStart;
         ICommand btdReg;
         ICommand btdSave;
         ICommand btd1;
+  
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -48,16 +47,15 @@ namespace ViewModel
             Btd1 = new UserCommands(setzeStein);
         }
 
-        private void setzeStein(object obj)
+        private void setzeStein(object o)
         {
-            Background1 = (SolidColorBrush)obj;
-            Background1 = System.Windows.Media.Brushes.Cyan;
-            onPropertyChanged(new PropertyChangedEventArgs("Background"));
             
         }
         private void speichern(object obj)
         {
             spiel.Speichern();
+            Window w = (Window)obj;
+            w.Close();
         }
         private void Registrieren(object obj)
         {
@@ -66,9 +64,7 @@ namespace ViewModel
         }
         private void starten(object obj)
         {
-            ConsoleColor Background = (ConsoleColor)obj;
-            Background = ConsoleColor.Red;
-            onPropertyChanged(new PropertyChangedEventArgs("Background"));
+            
         }
         public ObservableCollection<Spieler> LSTSpieler
         {
@@ -157,17 +153,9 @@ namespace ViewModel
             }
         }
 
-        public SolidColorBrush Background1
+        private void SetzeStein(object obj)
         {
-            get
-            {
-                return Background;
-            }
-
-            set
-            {
-                Background = value;
-            }
+            onPropertyChanged(new PropertyChangedEventArgs("Background"));
         }
     }
 }
