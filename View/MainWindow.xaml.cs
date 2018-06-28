@@ -27,7 +27,7 @@ namespace View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            
+            //Bt_n.Background = Brushes.Blue;
         }
     }
 }
