@@ -41,16 +41,12 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="2">
-           
-            </Border>
+            <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
-            <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="2">
-                <Image Source="H:\Eigene Dateien\FI11\C#\ProjektVierGewinnt1\Download.jpg"></Image>
-            </Border>
+            <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="1" Grid.Row="1" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="1" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
