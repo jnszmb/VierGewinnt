@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using ViewModel;
 
 namespace View
 {
@@ -20,6 +21,11 @@ namespace View
     /// </summary>
     public partial class MainWindow : Window
     {
+        SolidColorBrush backgroundblank = System.Windows.Media.Brushes.White;
+        SolidColorBrush backgrounds1 = System.Windows.Media.Brushes.Yellow;
+        SolidColorBrush backgrounds2 = System.Windows.Media.Brushes.Blue;
+
+
         public MainWindow()
         {
             InitializeComponent();
@@ -27,7 +33,6 @@ namespace View
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            //Bt_n.Background = Brushes.Blue;
         }
     }
 }

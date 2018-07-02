@@ -19,10 +19,13 @@ namespace ViewModel
         Spiel spiel;
         int punkteSp1;
         int punkteSp2;
-        SolidColorBrush background;
+
+        int[,] matrix = new int[6, 7];
+
         SolidColorBrush background1;
         SolidColorBrush background2;
-        
+        SolidColorBrush background3;
+
         ICommand btdStart;
         ICommand btdReg;
         ICommand btdSave;
@@ -76,6 +79,26 @@ namespace ViewModel
                     Background2 = System.Windows.Media.Brushes.Green;
                     onPropertyChanged(new PropertyChangedEventArgs("Background2"));
                     break;
+                case "3":
+                    Background3 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background3"));
+                    break;
+                //case "4":
+                //    Background4 = System.Windows.Media.Brushes.Green;
+                //    onPropertyChanged(new PropertyChangedEventArgs("Background4"));
+                //    break;
+                //case "5":
+                //    Background5 = System.Windows.Media.Brushes.Green;
+                //    onPropertyChanged(new PropertyChangedEventArgs("Background5"));
+                //    break;
+                //case "6":
+                //    Background6 = System.Windows.Media.Brushes.Green;
+                //    onPropertyChanged(new PropertyChangedEventArgs("Background6"));
+                //    break;
+                //case "7":
+                //    Background7 = System.Windows.Media.Brushes.Green;
+                //    onPropertyChanged(new PropertyChangedEventArgs("Background7"));
+                //    break;
             }
        }
         private void speichern(object obj)
@@ -179,20 +202,6 @@ namespace ViewModel
                 btd1 = value;
             }
         }
-
-        public SolidColorBrush Background
-        {
-            get
-            {
-                return background;
-            }
-
-            set
-            {
-                background = value;
-            }
-        }
-
         public ICommand Btd2
         {
             get
@@ -271,19 +280,6 @@ namespace ViewModel
             }
         }
 
-        public SolidColorBrush Background1
-        {
-            get
-            {
-                return background1;
-            }
-
-            set
-            {
-                background1 = value;
-            }
-        }
-
         public SolidColorBrush Background2
         {
             get
@@ -294,6 +290,45 @@ namespace ViewModel
             set
             {
                 background2 = value;
+            }
+        }
+
+        public SolidColorBrush Background3
+        {
+            get
+            {
+                return background3;
+            }
+
+            set
+            {
+                background3 = value;
+            }
+        }
+
+        public int[,] Matrix
+        {
+            get
+            {
+                return matrix;
+            }
+
+            set
+            {
+                matrix = value;
+            }
+        }
+
+        public SolidColorBrush Background1
+        {
+            get
+            {
+                return background1;
+            }
+
+            set
+            {
+                background1 = value;
             }
         }
     }
