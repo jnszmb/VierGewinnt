@@ -20,14 +20,23 @@ namespace ViewModel
         int punkteSp1;
         int punkteSp2;
         SolidColorBrush background;
+        SolidColorBrush background1;
+        int zaehler;
         
         ICommand btdStart;
         ICommand btdReg;
         ICommand btdSave;
         ICommand btd1;
+        ICommand btd2;
+        ICommand btd3;
+        ICommand btd4;
+        ICommand btd5;
+        ICommand btd6;
+        ICommand btd7;
 
-        
-  
+
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -48,6 +57,12 @@ namespace ViewModel
             BtdStart = new UserCommands(starten);
             BtdSave = new UserCommands(speichern);
             Btd1 = new UserCommands(setzeStein);
+            Btd2 = new UserCommands(setzeStein);
+            Btd3 = new UserCommands(setzeStein);
+            Btd4 = new UserCommands(setzeStein);
+            Btd5 = new UserCommands(setzeStein);
+            Btd6 = new UserCommands(setzeStein);
+            Btd7 = new UserCommands(setzeStein);
 
 
         }
@@ -55,7 +70,9 @@ namespace ViewModel
         private void setzeStein(object o)
         {
             Background = System.Windows.Media.Brushes.Cyan;
-            onPropertyChanged(new PropertyChangedEventArgs("Background"));
+            Background1 = System.Windows.Media.Brushes.Red;
+            onPropertyChanged(new PropertyChangedEventArgs("Background1"));
+            Zaehler++;
         }
 
         private void speichern(object obj)
@@ -73,7 +90,8 @@ namespace ViewModel
 
         private void starten(object obj)
         {
-            
+            String name = (String)obj;
+            spiel.Starten(name);
         }
 
         public ObservableCollection<Spieler>LSTSpieler
@@ -173,6 +191,110 @@ namespace ViewModel
             set
             {
                 background = value;
+            }
+        }
+
+        public int Zaehler
+        {
+            get
+            {
+                return zaehler;
+            }
+
+            set
+            {
+                zaehler = value;
+            }
+        }
+
+        public ICommand Btd2
+        {
+            get
+            {
+                return btd2;
+            }
+
+            set
+            {
+                btd2 = value;
+            }
+        }
+
+        public ICommand Btd3
+        {
+            get
+            {
+                return btd3;
+            }
+
+            set
+            {
+                btd3 = value;
+            }
+        }
+
+        public ICommand Btd4
+        {
+            get
+            {
+                return btd4;
+            }
+
+            set
+            {
+                btd4 = value;
+            }
+        }
+
+        public ICommand Btd5
+        {
+            get
+            {
+                return btd5;
+            }
+
+            set
+            {
+                btd5 = value;
+            }
+        }
+
+        public ICommand Btd6
+        {
+            get
+            {
+                return btd6;
+            }
+
+            set
+            {
+                btd6 = value;
+            }
+        }
+
+        public ICommand Btd7
+        {
+            get
+            {
+                return btd7;
+            }
+
+            set
+            {
+                btd7 = value;
+            }
+        }
+
+        public SolidColorBrush Background1
+        {
+            get
+            {
+                return background1;
+            }
+
+            set
+            {
+                background1 = value;
             }
         }
     }

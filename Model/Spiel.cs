@@ -122,5 +122,10 @@ namespace Model
             con.Close();
         }
 
+        public void Starten(name)
+        {
+            
+        }
+
     }
 }

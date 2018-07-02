@@ -42,12 +42,10 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="2">
-           
-            </Border>
-            <Border Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="2" ></Border>
-            <Border Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
-            <Border Grid.Column="0" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
+            <Border Grid.Column="0" Grid.Row="0" BorderBrush="Black" BorderThickness="2" Background="{Binding Background}"></Border>
+            <Border x:Name="b1" Grid.Column="0" Grid.Row="1" BorderBrush="Black" BorderThickness="2" Background="{Binding Background1}"></Border>
+            <Border x:Name="b2" Grid.Column="0" Grid.Row="2" BorderBrush="Black" BorderThickness="2"></Border>
+            <Border x:Name="b3" Grid.Column="0" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="0" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="1" Grid.Row="0" BorderBrush="Black" BorderThickness="2"></Border>
@@ -86,13 +84,13 @@
             <Border Grid.Column="6" Grid.Row="3" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="6" Grid.Row="4" BorderBrush="Black" BorderThickness="2"></Border>
             <Border Grid.Column="6" Grid.Row="5" BorderBrush="Black" BorderThickness="2"></Border>
-            <Button x:Name="Bt_n" Grid.Column="0" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" Background="{Binding Background}"></Button>
-            <Button x:Name="Bt_n1" Grid.Column="1" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" Background="{Binding Background}"></Button>
-            <Button x:Name="Bt_n2" Grid.Column="2" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" Background="{Binding Background}"></Button>
-            <Button x:Name="Bt_n3" Grid.Column="3" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" Background="{Binding Background}"></Button>
-            <Button x:Name="Bt_n4" Grid.Column="4" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" Background="{Binding Background}"></Button>
-            <Button x:Name="Bt_n5" Grid.Column="5" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" Background="{Binding Background}"></Button>
-            <Button x:Name="Bt_n6" Grid.Column="6" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" Background="{Binding Background}"></Button>
+            <Button x:Name="Bt_n" Grid.Column="0" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="{Binding ElementName=b1, Path=Background}"></Button>
+            <Button x:Name="Bt_n1" Grid.Column="1" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd2}" CommandParameter="{Binding ElementName=b2, Path=Background}"></Button>
+            <Button x:Name="Bt_n2" Grid.Column="2" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd3}" CommandParameter="{Binding ElementName=b3, Path=Background}"></Button>
+            <Button x:Name="Bt_n3" Grid.Column="3" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd4}" CommandParameter="{Binding ElementName=b1, Path=Background}"></Button>
+            <Button x:Name="Bt_n4" Grid.Column="4" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd5}" CommandParameter="{Binding ElementName=b1, Path=Background}"></Button>
+            <Button x:Name="Bt_n5" Grid.Column="5" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd6}" CommandParameter="{Binding ElementName=b1, Path=Background}"></Button>
+            <Button x:Name="Bt_n6" Grid.Column="6" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd7}" CommandParameter="{Binding ElementName=b1, Path=Background}"></Button>
         </Grid>
         <Grid Grid.Row="0" Grid.Column="0">
             <Grid.RowDefinitions>
