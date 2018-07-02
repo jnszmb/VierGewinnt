@@ -42,8 +42,8 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Ellipse Grid.Column="0" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="0" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse Grid.Column="0" Grid.Row="0" Fill="{Binding Background1}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse Grid.Column="0" Grid.Row="1" Fill="{Binding Background2}" Stroke="Black" StrokeThickness="5"/>
             <Ellipse Grid.Column="0" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
             <Ellipse Grid.Column="0" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
             <Ellipse Grid.Column="0" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>

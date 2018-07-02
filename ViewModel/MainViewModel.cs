@@ -21,6 +21,7 @@ namespace ViewModel
         int punkteSp2;
         SolidColorBrush background;
         SolidColorBrush background1;
+        SolidColorBrush background2;
         
         ICommand btdStart;
         ICommand btdReg;
@@ -65,17 +66,18 @@ namespace ViewModel
         private void setzeStein(object o)
         {
             String name = (String)o;
-            if (name.Equals("1"))
+            switch (name)
             {
-                Background1 = System.Windows.Media.Brushes.Red;
-                onPropertyChanged(new PropertyChangedEventArgs("Background1"));
+                case "1":
+                    Background1 = System.Windows.Media.Brushes.Red;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background1"));
+                    break;
+                case "2":
+                    Background2 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background2"));
+                    break;
             }
-            else
-            {
-                Background = System.Windows.Media.Brushes.Cyan;
-                onPropertyChanged(new PropertyChangedEventArgs("Background"));
-            }
-            }
+       }
         private void speichern(object obj)
         {
             spiel.Speichern();
@@ -279,6 +281,19 @@ namespace ViewModel
             set
             {
                 background1 = value;
+            }
+        }
+
+        public SolidColorBrush Background2
+        {
+            get
+            {
+                return background2;
+            }
+
+            set
+            {
+                background2 = value;
             }
         }
     }
