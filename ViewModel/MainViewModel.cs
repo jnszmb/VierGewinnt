@@ -21,11 +21,15 @@ namespace ViewModel
         int punkteSp1;
         int punkteSp2;
 
-        int[,] matrix = new int[6, 7];
-
+        
         SolidColorBrush background1;
         SolidColorBrush background2;
         SolidColorBrush background3;
+        SolidColorBrush background4;
+        SolidColorBrush background5;
+        SolidColorBrush background6;
+        SolidColorBrush background7;
+        
 
         ICommand btdStart;
         ICommand btdReg;
@@ -57,7 +61,7 @@ namespace ViewModel
             spiel.BesterSpieler();
             BtdReg = new UserCommands(Registrieren);
             BtdStart = new UserCommands(starten);
-            BtdStart = new UserCommands(speichern);
+            BtdSave = new UserCommands(speichern);
             Btd1 = new UserCommands(setzeStein);
             Btd2 = new UserCommands(setzeStein);
             Btd3 = new UserCommands(setzeStein);
@@ -84,24 +88,24 @@ namespace ViewModel
                     Background3 = System.Windows.Media.Brushes.Green;
                     onPropertyChanged(new PropertyChangedEventArgs("Background3"));
                     break;
-                //case "4":
-                //    Background4 = System.Windows.Media.Brushes.Green;
-                //    onPropertyChanged(new PropertyChangedEventArgs("Background4"));
-                //    break;
-                //case "5":
-                //    Background5 = System.Windows.Media.Brushes.Green;
-                //    onPropertyChanged(new PropertyChangedEventArgs("Background5"));
-                //    break;
-                //case "6":
-                //    Background6 = System.Windows.Media.Brushes.Green;
-                //    onPropertyChanged(new PropertyChangedEventArgs("Background6"));
-                //    break;
-                //case "7":
-                //    Background7 = System.Windows.Media.Brushes.Green;
-                //    onPropertyChanged(new PropertyChangedEventArgs("Background7"));
-                //    break;
+                case "4":
+                    Background4 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background4"));
+                    break;
+                case "5":
+                    Background5 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background5"));
+                    break;
+                case "6":
+                    Background6 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background6"));
+                    break;
+                case "7":
+                    Background7 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background7"));
+                    break;
             }
-       }
+        }
         private void speichern(object obj)
         {
             spiel.Speichern();
@@ -334,107 +338,55 @@ namespace ViewModel
             }
         }
 
-        public int Zaehler
+        public SolidColorBrush Background4
         {
             get
             {
-                return zaehler;
+                return background4;
             }
 
             set
             {
-                zaehler = value;
+                background4 = value;
             }
         }
 
-        public ICommand Btd2
+        public SolidColorBrush Background5
         {
             get
             {
-                return btd2;
+                return background5;
             }
 
             set
             {
-                btd2 = value;
+                background5 = value;
             }
         }
 
-        public ICommand Btd3
+        public SolidColorBrush Background6
         {
             get
             {
-                return btd3;
+                return background6;
             }
 
             set
             {
-                btd3 = value;
+                background6 = value;
             }
         }
 
-        public ICommand Btd4
+        public SolidColorBrush Background7
         {
             get
             {
-                return btd4;
+                return background7;
             }
 
             set
             {
-                btd4 = value;
-            }
-        }
-
-        public ICommand Btd5
-        {
-            get
-            {
-                return btd5;
-            }
-
-            set
-            {
-                btd5 = value;
-            }
-        }
-
-        public ICommand Btd6
-        {
-            get
-            {
-                return btd6;
-            }
-
-            set
-            {
-                btd6 = value;
-            }
-        }
-
-        public ICommand Btd7
-        {
-            get
-            {
-                return btd7;
-            }
-
-            set
-            {
-                btd7 = value;
-            }
-        }
-
-        public SolidColorBrush Background1
-        {
-            get
-            {
-                return background1;
-            }
-
-            set
-            {
-                background1 = value;
+                background7 = value;
             }
         }
     }

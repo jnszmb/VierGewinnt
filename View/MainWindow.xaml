@@ -9,7 +9,7 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="800" Width="1000">
     <Window.Background>
-        <ImageBrush ImageSource="H:\Eigene Dateien\FI11\C#\ProjektVierGewinnt1\Download.jpg"></ImageBrush>
+        <ImageBrush ImageSource="H:\Eigene Dateien\C# 2017_2018\VierGewinntProjekt\Download.jpg"></ImageBrush>
     </Window.Background>
         <Window.DataContext>
         <vm:MainViewModel></vm:MainViewModel>
@@ -42,50 +42,50 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
             </Grid.RowDefinitions>
-            <Ellipse x:Name="e05" Grid.Column="0" Grid.Row="0" Fill="{Binding Background1}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="0" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="0" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="0" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="0" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="0" Grid.Row="5" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="1" Grid.Row="0" Fill="{Binding Background2}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="1" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="1" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="1" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="1" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="1" Grid.Row="5" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="2" Grid.Row="0" Fill="{Binding Background3}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="2" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="2" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="2" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="2" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="2" Grid.Row="5" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="3" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="3" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="3" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="3" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="3" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="3" Grid.Row="5" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="4" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="4" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="4" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="4" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="4" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="4" Grid.Row="5" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="5" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="5" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="5" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="5" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="5" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="5" Grid.Row="5" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="6" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="6" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="6" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="6" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="6" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="6" Grid.Row="5" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e05" Grid.Column="0" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e04" Grid.Column="0" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e03" Grid.Column="0" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e02" Grid.Column="0" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e01" Grid.Column="0" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e00" Grid.Column="0" Grid.Row="5" Fill="{Binding Background1}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e15" Grid.Column="1" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e14" Grid.Column="1" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e13" Grid.Column="1" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e12" Grid.Column="1" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e11" Grid.Column="1" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e10" Grid.Column="1" Grid.Row="5" Fill="{Binding Background2}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e25" Grid.Column="2" Grid.Row="0" Fill="{Binding Background3}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e24" Grid.Column="2" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e23" Grid.Column="2" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e22" Grid.Column="2" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e21" Grid.Column="2" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e20" Grid.Column="2" Grid.Row="5" Fill="{Binding Background1}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e35" Grid.Column="3" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e34" Grid.Column="3" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e33" Grid.Column="3" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e32" Grid.Column="3" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e31" Grid.Column="3" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e30" Grid.Column="3" Grid.Row="5" Fill="{Binding Background2}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e45" Grid.Column="4" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e44" Grid.Column="4" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e43" Grid.Column="4" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e42" Grid.Column="4" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e41" Grid.Column="4" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e40" Grid.Column="4" Grid.Row="5" Fill="{Binding Background1}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e55" Grid.Column="5" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e54" Grid.Column="5" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e53" Grid.Column="5" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e52" Grid.Column="5" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e51" Grid.Column="5" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e50" Grid.Column="5" Grid.Row="5" Fill="{Binding Background2}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e65" Grid.Column="6" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e64" Grid.Column="6" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e63" Grid.Column="6" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e62" Grid.Column="6" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e61" Grid.Column="6" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse x:Name="e60" Grid.Column="6" Grid.Row="5" Fill="{Binding Background1}" Stroke="Black" StrokeThickness="5"/>
 
-            <Button x:Name="Bt_n1" Grid.Column="0" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" Click="Button_Click" ></Button>
+            <Button x:Name="Bt_n1" Grid.Column="0" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" ></Button>
             <Button x:Name="Bt_n2" Grid.Column="1" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd2}" CommandParameter="2" ></Button>
             <Button x:Name="Bt_n3" Grid.Column="2" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd3}" CommandParameter="3" ></Button>
             <Button x:Name="Bt_n4" Grid.Column="3" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd4}" CommandParameter="4" ></Button>

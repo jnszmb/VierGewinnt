@@ -61,13 +61,14 @@ namespace View
         {
             if(flag)
             {
-                bo1.Background = rot;
+                e60.Fill = rot;
                 flag = false;
             }
             else
             {
-                bo1.Background = blau;
+                e60.Fill = blau;
                 flag = true;
+
             }
         }
 
