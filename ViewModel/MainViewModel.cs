@@ -25,6 +25,10 @@ namespace ViewModel
         SolidColorBrush background1;
         SolidColorBrush background2;
         SolidColorBrush background3;
+        SolidColorBrush background4;
+        SolidColorBrush background5;
+        SolidColorBrush background6;
+        SolidColorBrush background7;
 
         ICommand btdStart;
         ICommand btdReg;
@@ -83,22 +87,22 @@ namespace ViewModel
                     Background3 = System.Windows.Media.Brushes.Green;
                     onPropertyChanged(new PropertyChangedEventArgs("Background3"));
                     break;
-                //case "4":
-                //    Background4 = System.Windows.Media.Brushes.Green;
-                //    onPropertyChanged(new PropertyChangedEventArgs("Background4"));
-                //    break;
-                //case "5":
-                //    Background5 = System.Windows.Media.Brushes.Green;
-                //    onPropertyChanged(new PropertyChangedEventArgs("Background5"));
-                //    break;
-                //case "6":
-                //    Background6 = System.Windows.Media.Brushes.Green;
-                //    onPropertyChanged(new PropertyChangedEventArgs("Background6"));
-                //    break;
-                //case "7":
-                //    Background7 = System.Windows.Media.Brushes.Green;
-                //    onPropertyChanged(new PropertyChangedEventArgs("Background7"));
-                //    break;
+                case "4":
+                    Background4 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background4"));
+                    break;
+                case "5":
+                    Background5 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background5"));
+                    break;
+                case "6":
+                    Background6 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background6"));
+                    break;
+                case "7":
+                    Background7 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background7"));
+                    break;
             }
        }
         private void speichern(object obj)
@@ -232,12 +236,12 @@ namespace ViewModel
         {
             get
             {
-                return btd4;
+                return Btd41;
             }
 
             set
             {
-                btd4 = value;
+                Btd41 = value;
             }
         }
 
@@ -245,12 +249,12 @@ namespace ViewModel
         {
             get
             {
-                return btd5;
+                return Btd51;
             }
 
             set
             {
-                btd5 = value;
+                Btd51 = value;
             }
         }
 
@@ -258,12 +262,12 @@ namespace ViewModel
         {
             get
             {
-                return btd6;
+                return Btd61;
             }
 
             set
             {
-                btd6 = value;
+                Btd61 = value;
             }
         }
 
@@ -271,12 +275,12 @@ namespace ViewModel
         {
             get
             {
-                return btd7;
+                return Btd71;
             }
 
             set
             {
-                btd7 = value;
+                Btd71 = value;
             }
         }
 
@@ -329,6 +333,58 @@ namespace ViewModel
             set
             {
                 background1 = value;
+            }
+        }
+
+        public ICommand Btd41
+        {
+            get
+            {
+                return btd4;
+            }
+
+            set
+            {
+                btd4 = value;
+            }
+        }
+
+        public ICommand Btd51
+        {
+            get
+            {
+                return btd5;
+            }
+
+            set
+            {
+                btd5 = value;
+            }
+        }
+
+        public ICommand Btd61
+        {
+            get
+            {
+                return btd6;
+            }
+
+            set
+            {
+                btd6 = value;
+            }
+        }
+
+        public ICommand Btd71
+        {
+            get
+            {
+                return btd7;
+            }
+
+            set
+            {
+                btd7 = value;
             }
         }
     }
