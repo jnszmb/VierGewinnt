@@ -57,20 +57,6 @@ namespace View
             InitializeComponent();
         }
 
-        private void Bt_n6_Click(object sender, RoutedEventArgs e)
-        {
-            if(flag)
-            {
-                bo1.Background = rot;
-                flag = false;
-            }
-            else
-            {
-                bo1.Background = blau;
-                flag = true;
-            }
-        }
-
         private void button_start_Click(object sender, RoutedEventArgs e)
         {
             GridFeld.IsEnabled = true;

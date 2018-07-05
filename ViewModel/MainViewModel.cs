@@ -21,8 +21,6 @@ namespace ViewModel
         int punkteSp1;
         int punkteSp2;
 
-        int[,] matrix = new int[6, 7];
-
         SolidColorBrush background1;
         SolidColorBrush background2;
         SolidColorBrush background3;
@@ -61,7 +59,7 @@ namespace ViewModel
             spiel.BesterSpieler();
             BtdReg = new UserCommands(Registrieren);
             BtdStart = new UserCommands(starten);
-            BtdStart = new UserCommands(speichern);
+            BtdSave = new UserCommands(speichern);
             Btd1 = new UserCommands(setzeStein);
             Btd2 = new UserCommands(setzeStein);
             Btd3 = new UserCommands(setzeStein);
@@ -208,148 +206,6 @@ namespace ViewModel
                 btd1 = value;
             }
         }
-        public ICommand Btd2
-        {
-            get
-            {
-                return btd2;
-            }
-
-            set
-            {
-                btd2 = value;
-            }
-        }
-
-        public ICommand Btd3
-        {
-            get
-            {
-                return btd3;
-            }
-
-            set
-            {
-                btd3 = value;
-            }
-        }
-
-        public ICommand Btd4
-        {
-            get
-            {
-                return Btd41;
-            }
-
-            set
-            {
-                Btd41 = value;
-            }
-        }
-
-        public ICommand Btd5
-        {
-            get
-            {
-                return Btd51;
-            }
-
-            set
-            {
-                Btd51 = value;
-            }
-        }
-
-        public ICommand Btd6
-        {
-            get
-            {
-                return Btd61;
-            }
-
-            set
-            {
-                Btd61 = value;
-            }
-        }
-
-        public ICommand Btd7
-        {
-            get
-            {
-                return Btd71;
-            }
-
-            set
-            {
-                Btd71 = value;
-            }
-        }
-
-        public SolidColorBrush Background2
-        {
-            get
-            {
-                return background2;
-            }
-
-            set
-            {
-                background2 = value;
-            }
-        }
-
-        public SolidColorBrush Background3
-        {
-            get
-            {
-                return background3;
-            }
-
-            set
-            {
-                background3 = value;
-            }
-        }
-
-        public int[,] Matrix
-        {
-            get
-            {
-                return matrix;
-            }
-
-            set
-            {
-                matrix = value;
-            }
-        }
-
-        public SolidColorBrush Background1
-        {
-            get
-            {
-                return background1;
-            }
-
-            set
-            {
-                background1 = value;
-            }
-        }
-
-        public int Zaehler
-        {
-            get
-            {
-                return zaehler;
-            }
-
-            set
-            {
-                zaehler = value;
-            }
-        }
 
         public ICommand Btd2
         {
@@ -441,5 +297,86 @@ namespace ViewModel
                 background1 = value;
             }
         }
+
+        public SolidColorBrush Background2
+        {
+            get
+            {
+                return background2;
+            }
+
+            set
+            {
+                background2 = value;
+            }
+        }
+
+        public SolidColorBrush Background3
+        {
+            get
+            {
+                return background3;
+            }
+
+            set
+            {
+                background3 = value;
+            }
+        }
+
+        public SolidColorBrush Background4
+        {
+            get
+            {
+                return background4;
+            }
+
+            set
+            {
+                background4 = value;
+            }
+        }
+
+        public SolidColorBrush Background5
+        {
+            get
+            {
+                return background5;
+            }
+
+            set
+            {
+                background5 = value;
+            }
+        }
+
+        public SolidColorBrush Background6
+        {
+            get
+            {
+                return background6;
+            }
+
+            set
+            {
+                background6 = value;
+            }
+        }
+
+        public SolidColorBrush Background7
+        {
+            get
+            {
+                return background7;
+            }
+
+            set
+            {
+                background7 = value;
+            }
+        }
+
+
+
     }
 }

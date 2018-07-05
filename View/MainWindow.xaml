@@ -76,7 +76,7 @@
             <Ellipse Grid.Column="5" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
             <Ellipse Grid.Column="5" Grid.Row="2" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
             <Ellipse Grid.Column="5" Grid.Row="3" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
-            <Ellipse Grid.Column="5" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
+            <Ellipse Grid.Column="5" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5" Height="73" VerticalAlignment="Bottom"/>
             <Ellipse Grid.Column="5" Grid.Row="5" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
             <Ellipse Grid.Column="6" Grid.Row="0" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
             <Ellipse Grid.Column="6" Grid.Row="1" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
@@ -85,7 +85,7 @@
             <Ellipse Grid.Column="6" Grid.Row="4" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
             <Ellipse Grid.Column="6" Grid.Row="5" Fill="{Binding Background}" Stroke="Black" StrokeThickness="5"/>
 
-            <Button x:Name="Bt_n1" Grid.Column="0" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" Click="Button_Click" ></Button>
+            <Button x:Name="Bt_n1" Grid.Column="0" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd1}" CommandParameter="1" ></Button>
             <Button x:Name="Bt_n2" Grid.Column="1" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd2}" CommandParameter="2" ></Button>
             <Button x:Name="Bt_n3" Grid.Column="2" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd3}" CommandParameter="3" ></Button>
             <Button x:Name="Bt_n4" Grid.Column="3" Grid.Row="6" Content="^" FontSize="30" Command="{Binding Btd4}" CommandParameter="4" ></Button>
