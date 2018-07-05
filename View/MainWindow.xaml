@@ -23,7 +23,7 @@
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition Width="2*"></ColumnDefinition>
         </Grid.ColumnDefinitions>
-        <Grid Grid.Row="1" Grid.Column="1">
+        <Grid Grid.Row="1" Grid.Column="1" x:Name="GridFeld" IsEnabled="False">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition></ColumnDefinition>
                 <ColumnDefinition></ColumnDefinition>
@@ -121,7 +121,7 @@
                 <RowDefinition></RowDefinition>
                 <RowDefinition></RowDefinition>
            </Grid.RowDefinitions>
-            <Button x:Name="button_start" Content="Spiel starten" Grid.ColumnSpan="4" FontSize="60" Command="{Binding BtdStart}"></Button>
+            <Button x:Name="button_start" Content="Spiel starten" Grid.ColumnSpan="4" FontSize="60" Command="{Binding BtdStart}" Click="button_start_Click"></Button>
             <Label Grid.Row="1" Content="Spieler 1:" FontSize="29" Margin="20"></Label>
             <TextBox x:Name="tb_sp1" Grid.Row="1" Grid.Column="1" Margin="20" Text="{Binding ElementName=combobox_sp1, Path=SelectedItem.Name}" IsEnabled="False" Background="White"></TextBox>
             <Label Grid.Row="1" Grid.Column="2" Content="Spieler 2:" FontSize="29" Margin="20"></Label>

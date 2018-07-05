@@ -21,18 +21,59 @@ namespace View
     /// </summary>
     public partial class MainWindow : Window
     {
-        SolidColorBrush backgroundblank = System.Windows.Media.Brushes.White;
-        SolidColorBrush backgrounds1 = System.Windows.Media.Brushes.Yellow;
-        SolidColorBrush backgrounds2 = System.Windows.Media.Brushes.Blue;
+        int x;
+        int y; 
+        SolidColorBrush rot = Brushes.Red;
+        SolidColorBrush blau = Brushes.Blue;
+        bool flag = true;
+        public int X
+        {
+            get
+            {
+                return x;
+            }
 
+            set
+            {
+                x = value;
+            }
+        }
+
+        public int Y
+        {
+            get
+            {
+                return y;
+            }
+
+            set
+            {
+                y = value;
+            }
+        }
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Bt_n6_Click(object sender, RoutedEventArgs e)
         {
+            if(flag)
+            {
+                bo1.Background = rot;
+                flag = false;
+            }
+            else
+            {
+                bo1.Background = blau;
+                flag = true;
+            }
+        }
+
+        private void button_start_Click(object sender, RoutedEventArgs e)
+        {
+            GridFeld.IsEnabled = true;
         }
     }
 }

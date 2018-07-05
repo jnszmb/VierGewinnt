@@ -16,6 +16,7 @@ namespace ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        int[,] matrix = new int[6, 7];
         Spiel spiel;
         int punkteSp1;
         int punkteSp2;
@@ -118,7 +119,8 @@ namespace ViewModel
         }
         private void starten(object obj)
         {
-            
+            String name = (String)obj;
+            spiel.Starten(name);
         }
         public ObservableCollection<Spieler> LSTSpieler
         {
@@ -336,7 +338,46 @@ namespace ViewModel
             }
         }
 
-        public ICommand Btd41
+        public int Zaehler
+        {
+            get
+            {
+                return zaehler;
+            }
+
+            set
+            {
+                zaehler = value;
+            }
+        }
+
+        public ICommand Btd2
+        {
+            get
+            {
+                return btd2;
+            }
+
+            set
+            {
+                btd2 = value;
+            }
+        }
+
+        public ICommand Btd3
+        {
+            get
+            {
+                return btd3;
+            }
+
+            set
+            {
+                btd3 = value;
+            }
+        }
+
+        public ICommand Btd4
         {
             get
             {
@@ -349,7 +390,7 @@ namespace ViewModel
             }
         }
 
-        public ICommand Btd51
+        public ICommand Btd5
         {
             get
             {
@@ -362,7 +403,7 @@ namespace ViewModel
             }
         }
 
-        public ICommand Btd61
+        public ICommand Btd6
         {
             get
             {
@@ -375,7 +416,7 @@ namespace ViewModel
             }
         }
 
-        public ICommand Btd71
+        public ICommand Btd7
         {
             get
             {
@@ -385,6 +426,19 @@ namespace ViewModel
             set
             {
                 btd7 = value;
+            }
+        }
+
+        public SolidColorBrush Background1
+        {
+            get
+            {
+                return background1;
+            }
+
+            set
+            {
+                background1 = value;
             }
         }
     }
