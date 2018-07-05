@@ -20,10 +20,13 @@ namespace ViewModel
         Spiel spiel;
         int punkteSp1;
         int punkteSp2;
-        SolidColorBrush background;
+
+        int[,] matrix = new int[6, 7];
+
         SolidColorBrush background1;
-        int zaehler;
-        
+        SolidColorBrush background2;
+        SolidColorBrush background3;
+
         ICommand btdStart;
         ICommand btdReg;
         ICommand btdSave;
@@ -34,6 +37,8 @@ namespace ViewModel
         ICommand btd5;
         ICommand btd6;
         ICommand btd7;
+
+
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -48,11 +53,11 @@ namespace ViewModel
         public MainViewModel()
         {
             spiel = new Spiel();
-            spiel.LoadSpieler(); // Spieler werden aus der Datenbank geladen
-            spiel.BesterSpieler(); // Der beste Spieler wird ermittelt
-            BtdReg = new UserCommands(Registrieren);// ein neuer Spieler wird über den Button-Command aufgenommen
+            spiel.LoadSpieler();
+            spiel.BesterSpieler();
+            BtdReg = new UserCommands(Registrieren);
             BtdStart = new UserCommands(starten);
-            BtdSave = new UserCommands(speichern);
+            BtdStart = new UserCommands(speichern);
             Btd1 = new UserCommands(setzeStein);
             Btd2 = new UserCommands(setzeStein);
             Btd3 = new UserCommands(setzeStein);
@@ -64,32 +69,56 @@ namespace ViewModel
 
         private void setzeStein(object o)
         {
-            Background = System.Windows.Media.Brushes.Cyan;
-            Background1 = System.Windows.Media.Brushes.Red;
-            onPropertyChanged(new PropertyChangedEventArgs("Background1"));
-            Zaehler++;
-        }
-
+            String name = (String)o;
+            switch (name)
+            {
+                case "1":
+                    Background1 = System.Windows.Media.Brushes.Red;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background1"));
+                    break;
+                case "2":
+                    Background2 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background2"));
+                    break;
+                case "3":
+                    Background3 = System.Windows.Media.Brushes.Green;
+                    onPropertyChanged(new PropertyChangedEventArgs("Background3"));
+                    break;
+                //case "4":
+                //    Background4 = System.Windows.Media.Brushes.Green;
+                //    onPropertyChanged(new PropertyChangedEventArgs("Background4"));
+                //    break;
+                //case "5":
+                //    Background5 = System.Windows.Media.Brushes.Green;
+                //    onPropertyChanged(new PropertyChangedEventArgs("Background5"));
+                //    break;
+                //case "6":
+                //    Background6 = System.Windows.Media.Brushes.Green;
+                //    onPropertyChanged(new PropertyChangedEventArgs("Background6"));
+                //    break;
+                //case "7":
+                //    Background7 = System.Windows.Media.Brushes.Green;
+                //    onPropertyChanged(new PropertyChangedEventArgs("Background7"));
+                //    break;
+            }
+       }
         private void speichern(object obj)
         {
             spiel.Speichern();
             Window w = (Window)obj;
             w.Close();
         }
-
-        private void Registrieren(object obj) 
+        private void Registrieren(object obj)
         {
             String name = (String)obj;
             Spieler s = spiel.Registrieren(name);
         }
-
         private void starten(object obj)
         {
             String name = (String)obj;
             spiel.Starten(name);
         }
-
-        public ObservableCollection<Spieler>LSTSpieler
+        public ObservableCollection<Spieler> LSTSpieler
         {
             get { return spiel.LstSpieler; }
         }
@@ -124,19 +153,6 @@ namespace ViewModel
             }
         }
 
-        public ICommand BtdReg
-        {
-            get
-            {
-                return btdReg;
-            }
-
-            set
-            {
-                btdReg = value;
-            }
-        }
-
         public ICommand BtdStart
         {
             get
@@ -147,6 +163,19 @@ namespace ViewModel
             set
             {
                 btdStart = value;
+            }
+        }
+
+        public ICommand BtdReg
+        {
+            get
+            {
+                return btdReg;
+            }
+
+            set
+            {
+                btdReg = value;
             }
         }
 
@@ -175,17 +204,133 @@ namespace ViewModel
                 btd1 = value;
             }
         }
-
-        public SolidColorBrush Background
+        public ICommand Btd2
         {
             get
             {
-                return background;
+                return btd2;
             }
 
             set
             {
-                background = value;
+                btd2 = value;
+            }
+        }
+
+        public ICommand Btd3
+        {
+            get
+            {
+                return btd3;
+            }
+
+            set
+            {
+                btd3 = value;
+            }
+        }
+
+        public ICommand Btd4
+        {
+            get
+            {
+                return btd4;
+            }
+
+            set
+            {
+                btd4 = value;
+            }
+        }
+
+        public ICommand Btd5
+        {
+            get
+            {
+                return btd5;
+            }
+
+            set
+            {
+                btd5 = value;
+            }
+        }
+
+        public ICommand Btd6
+        {
+            get
+            {
+                return btd6;
+            }
+
+            set
+            {
+                btd6 = value;
+            }
+        }
+
+        public ICommand Btd7
+        {
+            get
+            {
+                return btd7;
+            }
+
+            set
+            {
+                btd7 = value;
+            }
+        }
+
+        public SolidColorBrush Background2
+        {
+            get
+            {
+                return background2;
+            }
+
+            set
+            {
+                background2 = value;
+            }
+        }
+
+        public SolidColorBrush Background3
+        {
+            get
+            {
+                return background3;
+            }
+
+            set
+            {
+                background3 = value;
+            }
+        }
+
+        public int[,] Matrix
+        {
+            get
+            {
+                return matrix;
+            }
+
+            set
+            {
+                matrix = value;
+            }
+        }
+
+        public SolidColorBrush Background1
+        {
+            get
+            {
+                return background1;
+            }
+
+            set
+            {
+                background1 = value;
             }
         }
 
