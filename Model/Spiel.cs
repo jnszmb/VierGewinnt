@@ -122,7 +122,7 @@ namespace Model
             con.Close();
         }
 
-        public void Starten(name)
+        public void Starten(String name)
         {
             
         }

@@ -16,6 +16,7 @@ namespace ViewModel
 {
     public class MainViewModel : INotifyPropertyChanged
     {
+        int[,] matrix = new int[6, 7];
         Spiel spiel;
         int punkteSp1;
         int punkteSp2;
@@ -33,10 +34,6 @@ namespace ViewModel
         ICommand btd5;
         ICommand btd6;
         ICommand btd7;
-
-
-
-
 
         public event PropertyChangedEventHandler PropertyChanged;
 
@@ -63,8 +60,6 @@ namespace ViewModel
             Btd5 = new UserCommands(setzeStein);
             Btd6 = new UserCommands(setzeStein);
             Btd7 = new UserCommands(setzeStein);
-
-
         }
 
         private void setzeStein(object o)
